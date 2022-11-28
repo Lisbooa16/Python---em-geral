@@ -58,3 +58,25 @@ def gerar_fibonaci(qtd: int) -> None:
             contador += 1
 
 # gerar_fibonaci(10)
+
+#Composição            
+
+class Motor:
+    def ligar(self: object) -> None:
+        print('Motor ligado.....')
+
+class Pneu:
+    def encher(self: object) -> None:
+        print('Pneu cheio')
+
+class Carro:
+    def __init__(self: object, modelo: str) -> None:
+        self.__modelo = modelo
+        self.__motor = Motor()
+        self.__pneu1 = Pneu()
+        self.__pneu2 = Pneu()
+        self.__pneu3 = Pneu()
+        self.__pneu4 = Pneu()
+    
+fusca = Carro('Fusca')
+fusca._Carro__motor.ligar()
